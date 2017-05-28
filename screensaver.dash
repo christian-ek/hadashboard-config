@@ -1,0 +1,26 @@
+#
+# Main arguments, all optional
+#
+title: Höstanemonvägen 8
+widget_dimensions: [120, 120]
+widget_margins: [5, 5]
+widget_size: [1, 1]
+columns: 8
+
+iframe:
+  widget_type: iframe
+  refresh: 60
+  img_list:
+    - http://10.0.0.80:8123/local/house/1.png
+    - http://10.0.0.80:8123/local/house/2.png
+    - http://10.0.0.80:8123/local/house/3.png
+    - http://10.0.0.80:8123/local/house/4.png
+    - http://10.0.0.80:8123/local/house/5.png
+
+layout:
+  - iframe(8x5)
+  - spacer(8x1)
+  - spacer(8x1)
+  - spacer(8x1)
+  - spacer(8x1)
+  - include: bottom_panel

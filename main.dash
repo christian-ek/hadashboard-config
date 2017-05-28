@@ -1,0 +1,108 @@
+#
+# Main arguments, all optional
+#
+title: Höstanemonvägen 8
+widget_dimensions: [120, 120]
+widget_margins: [5, 5]
+widget_size: [1, 1]
+columns: 8
+
+layout:
+  - clock(2x1), weather(2x2), temp_hallen, temp_vardagsrum, larmet(2x1)
+  - christians_narvaro(1x1), sarahs_narvaro(1x1),fuktighet_blomma(1x1) 
+  - framsidan(2x1), baksidan(2x1), decklight(2x1), decklight_trappor(2x1)
+  - hallen(2x1), hallen_ingang(2x1)
+  - spacer(4x1)
+  - include: bottom_panel
+
+clock:
+  widget_type: clock
+  time_format: 24hr
+    
+weather:
+  widget_type: weather
+  units: "°C"
+
+larmet:
+  widget_type: sensor
+  title: Verisure
+  entity: sensor.verisure_status
+  
+framsidan:
+  widget_type: switch
+  title: Utomhus framsidan
+  entity: switch.main_entrance_lighting_switch_3_0_3
+  icon_on: fa-lightbulb-o
+  icon_off: fa-lightbulb-o
+
+hallen_ingang:
+  widget_type: switch
+  title: Hallen ingång
+  entity: switch.main_entrance_lighting_switch_3_0_2
+  icon_on: fa-lightbulb-o
+  icon_off: fa-lightbulb-o
+
+baksidan:
+  widget_type: switch
+  title: Utomhus baksidan
+  entity: switch.hallway_lighting_switch_4_0_2
+  icon_on: fa-lightbulb-o
+  icon_off: fa-lightbulb-o
+  
+hallen:
+  widget_type: switch
+  title: Hallen
+  entity: switch.hallway_lighting_switch_4_0
+  icon_on: fa-lightbulb-o
+  icon_off: fa-lightbulb-o
+
+decklight:
+  widget_type: switch
+  title: Decklight
+  entity: switch.decklight_switch_2_0_2
+  icon_on: fa-lightbulb-o
+  icon_off: fa-lightbulb-o
+
+decklight_trappor:
+  widget_type: switch
+  title: Decklight Trappor
+  entity: switch.decklight_switch_2_0_3
+  icon_on: fa-lightbulb-o
+  icon_off: fa-lightbulb-o
+    
+temp_hallen:
+  widget_type: sensor
+  title: Temperatur
+  title2: Hallen
+  units: "°C"
+  entity: sensor.hall_temperature
+  
+temp_vardagsrum:
+  widget_type: sensor
+  title: Temperatur
+  title2: Vardagsrum
+  units: "°C"
+  entity: sensor.flower_1_temperature
+  
+fuktighet_blomma:
+  widget_type: sensor
+  title: Fuktighet
+  title2: Elefantöra
+  units: "%"
+  entity: sensor.flower_1_moisture
+  
+christians_narvaro:
+  widget_type: device_tracker
+  title: Christian
+  device: christians_samsung
+  
+sarahs_narvaro:
+  widget_type: device_tracker
+  title: Sarah
+  device: sarahs_iphone
+  
+vader_iframe:
+  widget_type: iframe
+  url_list:
+    - https://www.klart.se/se/v%C3%A4stra-g%C3%B6talands-l%C3%A4n/v%C3%A4der-trollh%C3%A4ttan/
+

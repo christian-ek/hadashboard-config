@@ -1,0 +1,196 @@
+#
+# Main arguments, all optional
+#
+title: Höstanemonvägen 8
+widget_dimensions: [120, 120]
+widget_margins: [5, 5]
+widget_size: [1, 1]
+columns: 8
+global_parameters:
+    use_comma: 0
+    precision: 1
+    
+layout:
+  - current_media_title(6x1), next_media_title(2x1)
+  - media_player_picture(3x3), play_bandit_rock, play_barnens, play_sommarhits_2017, play_tropical_house, play_weekly_buzz
+  - play_klassisk_rock, play_pearl_jam, play_hits_idag, play_sarahs, play_top10
+  - play_raubtier, play_rmf_classic_rock, play_lite_fm, play_lugna_favoriter_1047, play_radioapans_knattekanal
+  - play_all_out_90s, play_lugna_favoriter_666, play_radioseven, play_rmf_rock, play_rockklassiker_1078, dashboard_back_to_music(3x1)
+  - include: bottom_panel
+
+current_media_title:
+  widget_type: sensor
+  title: "Spelas nu"
+  entity: sensor.sonos_playing
+
+next_media_title:
+  widget_type: sensor
+  title: "Nästa låt"
+  entity: sensor.sonos_playing_next
+  
+media_player_picture:
+  widget_type: iframe
+  refresh: 5
+  img_list: 
+    - http://10.0.0.80:8123/local/media_picture.jpg
+
+kitchen_group:
+  widget_type: switch
+  title: Köket
+  entity: switch.sonos_kitchen_group
+  icon_on: fa-toggle-on
+  icon_off: fa-toggle-off
+  
+living_room_group:
+  widget_type: switch
+  title: Vardagsrummet
+  entity: switch.sonos_living_room_group
+  icon_on: fa-toggle-on
+  icon_off: fa-toggle-off
+  
+play_all_out_90s:
+  widget_type: script
+  title: All out 90s
+  entity: script.play_all_out_90s
+  icon_on: fa-music
+  icon_off: fa-music
+  
+play_bandit_rock:
+  widget_type: script
+  title: Bandit Rock 104.8
+  entity: script.play_bandit_rock
+  icon_on: fa-music
+  icon_off: fa-music
+
+play_barnens:
+  widget_type: script
+  title: Barnens
+  entity: script.play_barnens
+  icon_on: fa-music
+  icon_off: fa-music
+  
+play_hits_idag:
+  widget_type: script
+  title: Hits idag
+  entity: script.play_hits_idag
+  icon_on: fa-music
+  icon_off: fa-music
+  
+play_klassisk_rock:
+  widget_type: script
+  title: Klassisk Rock
+  entity: script.play_klassisk_rock
+  icon_on: fa-music
+  icon_off: fa-music
+
+play_lite_fm:
+  widget_type: script
+  title: Lite FM 101.1
+  entity: script.play_lite_fm
+  icon_on: fa-music
+  icon_off: fa-music
+
+play_lugna_favoriter_666:
+  widget_type: script
+  title: Lugna Favoriter 66.6
+  entity: script.play_lugna_favoriter_666
+  icon_on: fa-music
+  icon_off: fa-music
+  
+play_lugna_favoriter_1047:
+  widget_type: script
+  title: Lugna Favoriter 104.7
+  entity: script.play_lugna_favoriter_1047
+  icon_on: fa-music
+  icon_off: fa-music
+  
+play_pearl_jam:
+  widget_type: script
+  title: Pearl Jam
+  entity: script.play_pearl_jam
+  icon_on: fa-music
+  icon_off: fa-music
+
+play_radioapans_knattekanal:
+  widget_type: script
+  title: Radioapans Knattekanal
+  entity: script.play_radioapans_knattekanal
+  icon_on: fa-music
+  icon_off: fa-music
+  
+play_radioseven:
+  widget_type: script
+  title: Radioseven
+  entity: script.play_radioseven
+  icon_on: fa-music
+  icon_off: fa-music
+
+play_raubtier:
+  widget_type: script
+  title: Raubtier
+  entity: script.play_raubtier
+  icon_on: fa-music
+  icon_off: fa-music
+
+play_rmf_rock:
+  widget_type: script
+  title: RMF Rock
+  entity: script.play_rmf_rock
+  icon_on: fa-music
+  icon_off: fa-music
+
+play_rmf_classic_rock:
+  widget_type: script
+  title: RMF Classic Rock
+  entity: script.play_rmf_classic_rock
+  icon_on: fa-music
+  icon_off: fa-music
+
+play_rockklassiker_1078:
+  widget_type: script
+  title: Rockklassiker 107.8
+  entity: script.play_rockklassiker_1078
+  icon_on: fa-music
+  icon_off: fa-music
+  
+play_sarahs:
+  widget_type: script
+  title: Sarahs
+  entity: script.play_sarahs
+  icon_on: fa-music
+  icon_off: fa-music
+
+play_sommarhits_2017:
+  widget_type: script
+  title: Sommarhits 2017
+  entity: script.play_sommarhits_2017
+  icon_on: fa-music
+  icon_off: fa-music
+  
+play_top10:
+  widget_type: script
+  title: Top 10
+  entity: script.play_top10
+  icon_on: fa-music
+  icon_off: fa-music
+
+play_tropical_house:
+  widget_type: script
+  title: Tropical House
+  entity: script.play_tropical_house
+  icon_on: fa-music
+  icon_off: fa-music
+  
+play_weekly_buzz:
+  widget_type: script
+  title: Weekly Buzz
+  entity: script.play_weekly_buzz
+  icon_on: fa-music
+  icon_off: fa-music
+  
+dashboard_back_to_music:
+  title: "Tillbaks"
+  widget_type: navigate
+  icon_active: fa-arrow-left
+  icon_inactive: fa-arrow-left
+  dashboard: music

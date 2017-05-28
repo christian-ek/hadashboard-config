@@ -1,0 +1,109 @@
+#
+# Main arguments, all optional
+#
+title: Höstanemonvägen 8
+widget_dimensions: [120, 120]
+widget_margins: [5, 5]
+widget_size: [1, 1]
+columns: 8
+global_parameters:
+    use_comma: 0
+    precision: 1
+    
+layout:
+  - current_media_title(6x1), next_media_title(2x1)
+  - media_player_picture(3x3), living_room_group(1x1), kitchen_group(1x1), shuffle_button(3x1)
+  - living_room_volume(2x1), repeat_button(3x1)
+  - kitchen_volume(2x1), crossfade_button(3x1)
+  - previous_button(1x1), pause_play_button(2x1), next_button(2x1), dashboard_play_music(3x1)
+  - include: bottom_panel
+
+current_media_title:
+  widget_type: sensor
+  title: "Spelas nu"
+  entity: sensor.sonos_playing
+
+next_media_title:
+  widget_type: sensor
+  title: "Nästa låt"
+  entity: sensor.sonos_playing_next
+  
+media_player_picture:
+  widget_type: iframe
+  refresh: 5
+  img_list: 
+    - http://10.0.0.80:8123/local/media_picture.jpg
+    
+kitchen_volume:
+  widget_type: input_slider
+  entity: input_slider.kitchen
+  title: Volym Kök
+  step: 0.1
+  
+living_room_volume:
+  widget_type: input_slider
+  entity: input_slider.living_room
+  title: Volym Vardagsrum
+  step: 0.1
+
+next_button:
+  widget_type: script
+  entity: script.sonos_control_next
+  icon_on: fa-step-forward
+  icon_off: fa-step-forward
+
+previous_button:
+  widget_type: script
+  entity: script.sonos_control_previous
+  icon_on: fa-step-backward
+  icon_off: fa-step-backward
+  
+pause_play_button:
+  widget_type: switch
+  entity: switch.sonos_play
+  icon_on: fa-pause
+  icon_off: fa-play
+  
+shuffle_button:
+  widget_type: switch
+  title: Blanda
+  entity: switch.sonos_shuffle
+  icon_on: fa-random
+  icon_off: fa-random
+  
+repeat_button:
+  widget_type: switch
+  title: Upprepa
+  entity: switch.sonos_repeat
+  icon_on: fa-repeat
+  icon_off: fa-repeat
+  
+crossfade_button:
+  widget_type: switch
+  title: Crossfading
+  entity: switch.sonos_crossfade
+  icon_on: fa-sliders
+  icon_off: fa-sliders
+  
+kitchen_group:
+  widget_type: switch
+  title: Köket
+  entity: switch.sonos_kitchen_group
+  icon_on: fa-toggle-on
+  icon_off: fa-toggle-off
+  
+living_room_group:
+  widget_type: switch
+  title: Vardagsrummet
+  entity: switch.sonos_living_room_group
+  icon_on: fa-toggle-on
+  icon_off: fa-toggle-off
+  
+dashboard_play_music:
+  title: "Välj musik"
+  widget_type: navigate
+  icon_active: fa-music
+  icon_inactive: fa-music
+  dashboard: play_music
+
+  
