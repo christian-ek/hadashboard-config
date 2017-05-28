@@ -1,5 +1,5 @@
 layout:
-  - dashboard_screensaver, dashboard_main(2x1), dashboard_cameras(2x1), dashboard_music(2x1), dashboard_weather
+  - dashboard_screensaver(1x1), dashboard_main(2x1), dashboard_cameras(2x1), dashboard_music(2x1), dashboard_weather(1x1)
 
 dashboard_screensaver:
   widget_type: navigate
