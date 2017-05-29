@@ -38,13 +38,15 @@ kitchen_volume:
   widget_type: input_slider
   entity: input_slider.kitchen
   title: Volym Kök
-  step: 0.1
+  units: "%"
+  step: 1
   
 living_room_volume:
   widget_type: input_slider
   entity: input_slider.living_room
   title: Volym Vardagsrum
-  step: 0.1
+  units: "%"
+  step: 1
 
 next_button:
   widget_type: script
