@@ -8,7 +8,7 @@ widget_size: [1, 1]
 columns: 8
 global_parameters:
     use_comma: 0
-    precision: 1
+    precision: 0
     
 layout:
   - current_media_title(6x1), next_media_title(2x1)
@@ -36,17 +36,17 @@ media_player_picture:
     
 kitchen_volume:
   widget_type: input_slider
-  entity: input_slider.kitchen
+  entity: input_slider.sonos_kitchen_volume
   title: Volym Kök
   units: "%"
-  step: 1
+  step: 5
   
 living_room_volume:
   widget_type: input_slider
-  entity: input_slider.living_room
+  entity: input_slider.sonos_living_room_volume
   title: Volym Vardagsrum
   units: "%"
-  step: 1
+  step: 5
 
 next_button:
   widget_type: script
