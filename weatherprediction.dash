@@ -23,9 +23,3 @@ weather:
   refresh: 1800
   url_list: 
     - http://10.0.0.80:8123/local/weather.jpg
-    
-dashboard_weather_hourly:
-  widget_type: navigate
-  icon_active: fa-clock-o
-  icon_inactive: fa-clock-o
-  dashboard: weatherprediction_hourly
