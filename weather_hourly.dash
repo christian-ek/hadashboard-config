@@ -53,4 +53,4 @@ dashboard_weather:
   widget_type: navigate
   icon_active: fa-cloud
   icon_inactive: fa-cloud
-  dashboard: weatherprediction
+  dashboard: weather
