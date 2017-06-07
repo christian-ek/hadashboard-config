@@ -16,9 +16,9 @@ layout:
   - dashboard_screensaver(1x1), dashboard_main(2x1), dashboard_camera_backyard(2x1), dashboard_music(2x1), dashboard_weather(1x1)
 
 camera_frontyard:
-  widget_type: camera
+  widget_type: iframe
   refresh: 1
-  entity_picture: http://10.0.0.80:8123/api/camera_proxy/camera.huvudentren?token=5942e5b9eaa5e553e8c0765c4adb12baf12b8defbb9ce3f5fb77a1b82d3ad73a
+  img_list: http://10.0.0.92/snap.jpeg
 
 #### Menu row
 dashboard_screensaver:
