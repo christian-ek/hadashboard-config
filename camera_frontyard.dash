@@ -8,23 +8,17 @@ widget_size: [1, 1]
 columns: 8
 
 layout:
-  - iframe(8x5)
+  - camera_frontyard(8x5)
   - spacer(8x1)
   - spacer(8x1)
   - spacer(8x1)
   - spacer(8x1)
-  - dashboard_screensaver(1x1), dashboard_main(2x1), dashboard_camera_frontyard(2x1), dashboard_music(2x1), dashboard_weather(1x1)
+  - dashboard_screensaver(1x1), dashboard_main(2x1), dashboard_camera_backyard(2x1), dashboard_music(2x1), dashboard_weather(1x1)
 
-iframe:
-  widget_type: iframe
-  refresh: 5
-  img_list:
-    - http://10.0.0.80:8123/local/house/1.png
-    - http://10.0.0.80:8123/local/house/2.png
-    - http://10.0.0.80:8123/local/house/3.png
-    - http://10.0.0.80:8123/local/house/4.png
-    - http://10.0.0.80:8123/local/house/5.png
-
+camera_frontyard:
+  widget_type: camera
+  refresh: 1
+  entity_picture: http://10.0.0.80:8123/api/camera_proxy/camera.huvudentren?token=5942e5b9eaa5e553e8c0765c4adb12baf12b8defbb9ce3f5fb77a1b82d3ad73a
 
 #### Menu row
 dashboard_screensaver:
@@ -39,11 +33,11 @@ dashboard_main:
   icon_inactive: mdi-view-dashboard
   dashboard: main
 
-dashboard_camera_frontyard:
+dashboard_camera_backyard:
   widget_type: navigate
   icon_active: fa-camera-retro
   icon_inactive: fa-camera-retro
-  dashboard: camera_frontyard
+  dashboard: camera_backyard
 
 dashboard_music:
   widget_type: navigate
@@ -56,3 +50,4 @@ dashboard_weather:
   icon_active: fa-cloud
   icon_inactive: fa-cloud
   dashboard: weather
+

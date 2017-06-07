@@ -13,7 +13,7 @@ layout:
   - framsidan(2x1), baksidan(2x1), decklight(2x1), decklight_trappor(2x1)
   - hallen(2x1), hallen_ingang(2x1)
   - spacer(4x1)
-  - include: bottom_panel
+  - dashboard_screensaver(1x1), dashboard_main(2x1), dashboard_camera_frontyard(2x1), dashboard_music(2x1), dashboard_weather(1x1)
 
 clock:
   widget_type: clock
@@ -101,3 +101,33 @@ sarahs_narvaro:
   title: Sarah
   device: sarahs_iphone
   
+#### Menu row
+dashboard_screensaver:
+  widget_type: navigate
+  icon_active: fa-desktop
+  icon_inactive: fa-desktop
+  dashboard: screensaver
+
+dashboard_main:
+  widget_type: navigate
+  icon_active: mdi-view-dashboard
+  icon_inactive: mdi-view-dashboard
+  dashboard: main
+
+dashboard_camera_frontyard:
+  widget_type: navigate
+  icon_active: fa-camera-retro
+  icon_inactive: fa-camera-retro
+  dashboard: camera_frontyard
+
+dashboard_music:
+  widget_type: navigate
+  icon_active: fa-music
+  icon_inactive: fa-music
+  dashboard: music
+
+dashboard_weather:
+  widget_type: navigate
+  icon_active: fa-cloud
+  icon_inactive: fa-cloud
+  dashboard: weatherprediction

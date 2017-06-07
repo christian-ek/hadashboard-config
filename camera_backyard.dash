@@ -8,23 +8,17 @@ widget_size: [1, 1]
 columns: 8
 
 layout:
-  - iframe(8x5)
+  - camera_backyard(8x5)
   - spacer(8x1)
   - spacer(8x1)
   - spacer(8x1)
   - spacer(8x1)
   - dashboard_screensaver(1x1), dashboard_main(2x1), dashboard_camera_frontyard(2x1), dashboard_music(2x1), dashboard_weather(1x1)
 
-iframe:
-  widget_type: iframe
-  refresh: 5
-  img_list:
-    - http://10.0.0.80:8123/local/house/1.png
-    - http://10.0.0.80:8123/local/house/2.png
-    - http://10.0.0.80:8123/local/house/3.png
-    - http://10.0.0.80:8123/local/house/4.png
-    - http://10.0.0.80:8123/local/house/5.png
-
+camera_backyard:
+  widget_type: camera
+  refresh: 1
+  entity_picture: http://10.0.0.80:8123/api/camera_proxy/camera.baksidan?token=50f4d82e570713256f8957498f81c5a7f174455df412b4f2f97a4fd36f6f54cc
 
 #### Menu row
 dashboard_screensaver:
@@ -56,3 +50,4 @@ dashboard_weather:
   icon_active: fa-cloud
   icon_inactive: fa-cloud
   dashboard: weather
+

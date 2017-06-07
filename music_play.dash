@@ -16,7 +16,7 @@ layout:
   - play_klassisk_rock, play_pearl_jam, play_hits_idag, play_sarahs, play_top10
   - play_raubtier, play_rmf_classic_rock, play_lite_fm, play_lugna_favoriter_1047, play_radioapans_knattekanal
   - play_all_out_90s, play_lugna_favoriter_666, play_radioseven, play_rmf_rock, play_rockklassiker_1078, dashboard_back_to_music(3x1)
-  - include: bottom_panel
+  - dashboard_screensaver(1x1), dashboard_main(2x1), dashboard_camera_frontyard(2x1), dashboard_music(2x1), dashboard_weather(1x1)
 
 current_media_title:
   widget_type: sensor
@@ -194,3 +194,34 @@ dashboard_back_to_music:
   icon_active: fa-arrow-left
   icon_inactive: fa-arrow-left
   dashboard: music
+
+#### Menu row
+dashboard_screensaver:
+  widget_type: navigate
+  icon_active: fa-desktop
+  icon_inactive: fa-desktop
+  dashboard: screensaver
+
+dashboard_main:
+  widget_type: navigate
+  icon_active: mdi-view-dashboard
+  icon_inactive: mdi-view-dashboard
+  dashboard: main
+
+dashboard_camera_frontyard:
+  widget_type: navigate
+  icon_active: fa-camera-retro
+  icon_inactive: fa-camera-retro
+  dashboard: camera_frontyard
+
+dashboard_music:
+  widget_type: navigate
+  icon_active: fa-music
+  icon_inactive: fa-music
+  dashboard: music
+
+dashboard_weather:
+  widget_type: navigate
+  icon_active: fa-cloud
+  icon_inactive: fa-cloud
+  dashboard: weather

@@ -16,7 +16,7 @@ layout:
   - living_room_volume(2x1), repeat_button(3x1)
   - kitchen_volume(2x1), crossfade_button(3x1)
   - previous_button(1x1), pause_play_button(2x1), next_button(2x1), dashboard_play_music(3x1)
-  - include: bottom_panel
+  - dashboard_screensaver(1x1), dashboard_main(2x1), dashboard_camera_frontyard(2x1), dashboard_music(2x1), dashboard_weather(1x1)
 
 current_media_title:
   widget_type: sensor
@@ -106,6 +106,36 @@ dashboard_play_music:
   widget_type: navigate
   icon_active: fa-music
   icon_inactive: fa-music
-  dashboard: play_music
+  dashboard: music_play
 
+#### Menu row
+dashboard_screensaver:
+  widget_type: navigate
+  icon_active: fa-desktop
+  icon_inactive: fa-desktop
+  dashboard: screensaver
+
+dashboard_main:
+  widget_type: navigate
+  icon_active: mdi-view-dashboard
+  icon_inactive: mdi-view-dashboard
+  dashboard: main
+
+dashboard_camera_frontyard:
+  widget_type: navigate
+  icon_active: fa-camera-retro
+  icon_inactive: fa-camera-retro
+  dashboard: camera_frontyard
+
+dashboard_music:
+  widget_type: navigate
+  icon_active: fa-music
+  icon_inactive: fa-music
+  dashboard: music
+
+dashboard_weather:
+  widget_type: navigate
+  icon_active: fa-cloud
+  icon_inactive: fa-cloud
+  dashboard: weather
   

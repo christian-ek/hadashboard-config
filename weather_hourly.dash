@@ -1,6 +1,30 @@
+#
+# Main arguments, all optional
+#
+title: Höstanemonvägen 8
+widget_dimensions: [120, 120]
+widget_margins: [5, 5]
+widget_size: [1, 1]
+columns: 8
+global_parameters:
+    use_comma: 0
+    precision: 1
+    
 layout:
-  - dashboard_screensaver(1x1), dashboard_main(2x1), dashboard_cameras(2x1), dashboard_music(2x1), dashboard_weather(1x1)
+  - weather(8x5)
+  - 
+  -
+  - 
+  -
+  - dashboard_screensaver(1x1), dashboard_main(2x1), dashboard_camera_frontyard(2x1), dashboard_music(2x1), dashboard_weather(1x1)
 
+weather:
+  widget_type: iframe
+  refresh: 1800
+  url_list: 
+    - http://10.0.0.80:8123/local/weather_hourly.jpg
+
+#### Menu row
 dashboard_screensaver:
   widget_type: navigate
   icon_active: fa-desktop
@@ -13,11 +37,11 @@ dashboard_main:
   icon_inactive: mdi-view-dashboard
   dashboard: main
 
-dashboard_cameras:
+dashboard_camera_frontyard:
   widget_type: navigate
   icon_active: fa-camera-retro
   icon_inactive: fa-camera-retro
-  dashboard: cameras
+  dashboard: camera_frontyard
 
 dashboard_music:
   widget_type: navigate
